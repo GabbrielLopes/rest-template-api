@@ -1,4 +1,4 @@
-package com.gabbriellps.resttemplate.api.dto;
+package com.gabbriellps.resttemplate.api.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

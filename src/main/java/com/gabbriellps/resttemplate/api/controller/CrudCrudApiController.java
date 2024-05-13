@@ -1,13 +1,12 @@
 package com.gabbriellps.resttemplate.api.controller;
 
-import com.gabbriellps.resttemplate.api.dto.VeiculoDTO;
+import com.gabbriellps.resttemplate.api.dto.request.VeiculoDTO;
 import com.gabbriellps.resttemplate.api.service.interfaces.CrudCrudApiService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/v1")
@@ -19,6 +18,11 @@ public class CrudCrudApiController {
         this.crudCrudApiService = crudCrudApiService;
     }
 
+
+    @GetMapping("/veiculos")
+    public ResponseEntity<List<VeiculoDTO>> buscaVeiculos(){
+        return ResponseEntity.status(HttpStatus.OK).body(crudCrudApiService.buscaVeiculos());
+    }
 
     @PostMapping("/veiculos")
     public ResponseEntity<?> insereVeiculo(@RequestBody VeiculoDTO requestDTO){

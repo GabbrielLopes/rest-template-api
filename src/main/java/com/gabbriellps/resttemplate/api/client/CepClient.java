@@ -1,7 +1,7 @@
 package com.gabbriellps.resttemplate.api.client;
 
-import com.gabbriellps.resttemplate.api.dto.CepBrasilApiResponseDTO;
-import com.gabbriellps.resttemplate.api.dto.ViaCepResponseDTO;
+import com.gabbriellps.resttemplate.api.dto.response.CepBrasilApiResponseDTO;
+import com.gabbriellps.resttemplate.api.dto.response.ViaCepResponseDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;

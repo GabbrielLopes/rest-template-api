@@ -1,7 +1,7 @@
 package com.gabbriellps.resttemplate.api.controller;
 
-import com.gabbriellps.resttemplate.api.dto.CepBrasilApiResponseDTO;
-import com.gabbriellps.resttemplate.api.dto.ViaCepResponseDTO;
+import com.gabbriellps.resttemplate.api.dto.response.CepBrasilApiResponseDTO;
+import com.gabbriellps.resttemplate.api.dto.response.ViaCepResponseDTO;
 import com.gabbriellps.resttemplate.api.service.interfaces.CepService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

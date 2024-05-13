@@ -1,8 +1,8 @@
 package com.gabbriellps.resttemplate.api.service;
 
 import com.gabbriellps.resttemplate.api.client.CepClient;
-import com.gabbriellps.resttemplate.api.dto.CepBrasilApiResponseDTO;
-import com.gabbriellps.resttemplate.api.dto.ViaCepResponseDTO;
+import com.gabbriellps.resttemplate.api.dto.response.CepBrasilApiResponseDTO;
+import com.gabbriellps.resttemplate.api.dto.response.ViaCepResponseDTO;
 import com.gabbriellps.resttemplate.api.service.interfaces.CepService;
 import org.springframework.stereotype.Service;
 
