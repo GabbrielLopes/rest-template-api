@@ -5,8 +5,11 @@ import org.springframework.web.client.RestTemplate;
 
 public class AbstractClient {
 
-    @Value("spring.via-cep.api.url")
+    @Value("${spring.via-cep.api.url}")
     private String uriViaCep;
+
+    @Value("${spring.brasil-api.api.url}")
+    private String uriBrasilApi;
 
     protected final transient RestTemplate restTemplate;
 
@@ -16,6 +19,10 @@ public class AbstractClient {
 
     protected String getUriViaCep(){
         return String.format("%s", uriViaCep);
+    }
+
+    protected String getUriBrasilApi(){
+        return String.format("%s", uriBrasilApi);
     }
 
 }
