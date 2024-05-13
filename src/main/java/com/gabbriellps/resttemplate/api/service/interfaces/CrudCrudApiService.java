@@ -10,4 +10,6 @@ public interface CrudCrudApiService {
 
     List<VeiculoDTO> buscaVeiculos();
 
+    VeiculoDTO buscaVeiculo(String id);
+
 }

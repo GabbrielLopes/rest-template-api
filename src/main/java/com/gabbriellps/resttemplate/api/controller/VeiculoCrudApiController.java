@@ -10,11 +10,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/v1")
-public class CrudCrudApiController {
+public class VeiculoCrudApiController {
 
     private final CrudCrudApiService crudCrudApiService;
 
-    public CrudCrudApiController(CrudCrudApiService crudCrudApiService) {
+    public VeiculoCrudApiController(CrudCrudApiService crudCrudApiService) {
         this.crudCrudApiService = crudCrudApiService;
     }
 
@@ -22,6 +22,11 @@ public class CrudCrudApiController {
     @GetMapping("/veiculos")
     public ResponseEntity<List<VeiculoDTO>> buscaVeiculos(){
         return ResponseEntity.status(HttpStatus.OK).body(crudCrudApiService.buscaVeiculos());
+    }
+
+    @GetMapping("/veiculos/{id}")
+    public ResponseEntity<VeiculoDTO> buscaVeiculo(@PathVariable("id")String id){
+        return ResponseEntity.status(HttpStatus.OK).body(crudCrudApiService.buscaVeiculo(id));
     }
 
     @PostMapping("/veiculos")

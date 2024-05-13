@@ -27,10 +27,20 @@ public class CrudCrudApiClient extends AbstractClient {
                 new HttpEntity<>(null), responseType).getBody();
     }
 
+    public VeiculoDTO buscaVeiculo(String id) {
+        UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(getUriCrudCrudApi())
+                .path("/veiculos/{id}");
+
+        return restTemplate.exchange(builder.buildAndExpand(id).toUriString(), HttpMethod.GET,
+                new HttpEntity<>(null), VeiculoDTO.class).getBody();
+    }
+
     public void insereVeiculo(VeiculoDTO requestDTO) {
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(getUriCrudCrudApi())
                 .path("/veiculos");
 
         restTemplate.exchange(builder.build().toUriString(), HttpMethod.POST, new HttpEntity<>(requestDTO), Void.class);
     }
+
+
 }

@@ -25,4 +25,9 @@ public class CrudCrudCrudApiServiceImpl implements CrudCrudApiService {
     public List<VeiculoDTO> buscaVeiculos() {
         return client.buscaVeiculos();
     }
+
+    @Override
+    public VeiculoDTO buscaVeiculo(String id) {
+        return client.buscaVeiculo(id);
+    }
 }
