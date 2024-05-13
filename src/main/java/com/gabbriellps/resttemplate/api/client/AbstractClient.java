@@ -11,6 +11,9 @@ public class AbstractClient {
     @Value("${spring.brasil-api.api.url}")
     private String uriBrasilApi;
 
+    @Value("${spring.crudcrud-api.api.url}")
+    private String uriCrudCrudApi;
+
     protected final transient RestTemplate restTemplate;
 
     protected AbstractClient(RestTemplate restTemplate) {
@@ -23,6 +26,10 @@ public class AbstractClient {
 
     protected String getUriBrasilApi(){
         return String.format("%s", uriBrasilApi);
+    }
+
+    protected String getUriCrudCrudApi(){
+        return String.format("%s", uriCrudCrudApi);
     }
 
 }
