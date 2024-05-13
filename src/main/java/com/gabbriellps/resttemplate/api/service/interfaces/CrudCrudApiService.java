@@ -1,15 +1,20 @@
 package com.gabbriellps.resttemplate.api.service.interfaces;
 
-import com.gabbriellps.resttemplate.api.dto.request.VeiculoDTO;
+import com.gabbriellps.resttemplate.api.dto.request.VeiculoRequestDTO;
+import com.gabbriellps.resttemplate.api.dto.response.VeiculoResponseDTO;
 
 import java.util.List;
 
 public interface CrudCrudApiService {
 
-    void insereVeiculo(VeiculoDTO requestDTO);
+    void insereVeiculo(VeiculoRequestDTO requestDTO);
 
-    List<VeiculoDTO> buscaVeiculos();
+    List<VeiculoResponseDTO> buscaVeiculos();
 
-    VeiculoDTO buscaVeiculo(String id);
+    VeiculoResponseDTO buscaVeiculo(String id);
+
+    void editaVeiculo(String id, VeiculoRequestDTO requestDTO);
+
+    void deletaVeiculo(String id);
 
 }
