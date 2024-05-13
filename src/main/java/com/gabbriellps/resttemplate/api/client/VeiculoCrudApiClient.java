@@ -11,8 +11,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 
 @Component
-public class CrudCrudApiClient extends AbstractClient {
-    protected CrudCrudApiClient(RestTemplate restTemplate) {
+public class VeiculoCrudApiClient extends AbstractClient {
+    protected VeiculoCrudApiClient(RestTemplate restTemplate) {
         super(restTemplate);
     }
 
